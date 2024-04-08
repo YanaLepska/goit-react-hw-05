@@ -15,13 +15,15 @@
   color: rgb(24, 24, 112);
   background: rgb(227, 235, 254);
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   padding: 16px 32px;
   align-items: center;
   justify-content: center;
   width: 100px;
   border-radius: 4px;
   height: 32px;
+  margin-left: 50px;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -29,4 +31,12 @@
 .btnSearch:hover {
   background-color: rgb(193, 193, 238);
   box-shadow: 0px 0px 12px 2px rgba(193, 193, 238, 0.69);
+}
+
+@media screen and (min-width: 768px) {
+  .btnSearch {
+    display: inline-flex;
+    margin-left: 0;
+    flex-direction: row;
+  }
 }
