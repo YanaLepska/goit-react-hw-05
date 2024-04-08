@@ -1,0 +1,26 @@
+.header {
+  height: 56px;
+  background-color: rgb(225, 217, 246);
+  color: rgba(2, 0, 36, 1);
+  box-shadow: 0px 4px 10px 1px rgba(181, 152, 249, 0.77);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 36px;
+  padding: 16px;
+  margin-left: 70px;
+}
+
+.navLinkItem {
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(69, 11, 123);
+  text-decoration: underline;
+}

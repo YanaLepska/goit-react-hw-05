@@ -1,0 +1,11 @@
+.movieItem {
+  color: aliceblue;
+  letter-spacing: 0.07em;
+}
+
+.movieList {
+  margin: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

@@ -1,0 +1,35 @@
+.movieData {
+  margin: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.movieDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.movieText {
+  margin-top: 8px;
+  letter-spacing: 0.05em;
+  max-width: 500px;
+}
+
+.movieDescription li {
+  margin-top: 8px;
+}
+
+.movieTitle {
+  color: rgb(177, 198, 247);
+}
+
+@media screen and (min-width: 768px) {
+  .movieData {
+    margin: 30px 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+}

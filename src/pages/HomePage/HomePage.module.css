@@ -1,0 +1,28 @@
+.trend {
+  margin: 40px 60px;
+  color: rgb(177, 198, 247);
+  letter-spacing: 0.2em;
+  font-size: 40px;
+}
+
+.moviesImg {
+  background-image: url(./selected-category.png);
+  background-repeat: no-repeat;
+  background-position: 0% 10%;
+  margin-top: 30px;
+  padding-top: 200px;
+  background-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .moviesImg {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .moviesImg {
+    padding-top: 250px;
+    background-position: 0% 35%;
+  }
+}

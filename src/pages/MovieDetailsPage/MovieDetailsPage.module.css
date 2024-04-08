@@ -1,0 +1,11 @@
+.container,
+.detailsTitle {
+  margin: 20px 0 0 50px;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  color: rgb(207, 215, 255);
+  margin-bottom: 50px;
+}

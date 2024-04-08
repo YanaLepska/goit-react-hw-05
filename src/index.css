@@ -34,5 +34,7 @@ img {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(120deg, rgb(1, 0, 8) 45%, rgb(18, 13, 62) 100%);
+  color: aliceblue;
 }
