@@ -7,6 +7,7 @@ const MovieData = ({
     overview,
     poster_path,
     genres,
+    tagline
   },
 }) => {
    const defaultImg =
@@ -24,6 +25,8 @@ const MovieData = ({
         <p>
           <b>Score:</b> ⭐ {vote_average}
         </p>
+
+        <p><b>Tagline:</b> {tagline ? tagline : "🧾 Not found"}</p>
         <div>
           <p>
             <b>Overview:</b>
@@ -34,7 +37,7 @@ const MovieData = ({
         <p>
           <b>Release:</b> {release_date}
         </p>
-        <ul >
+        <ul className={css.movieGenre}>
           <b>Genres:</b>
           {Array.isArray(genres) &&
             genres.map((genre) => (

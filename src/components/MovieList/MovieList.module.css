@@ -1,11 +1,41 @@
 .movieItem {
   color: aliceblue;
   letter-spacing: 0.07em;
+  padding: 24px;
+  border: 1px solid rgb(177, 198, 247);
+  border-radius: 5px;
+  text-align: center;
+  width: 320px;
+  height: 510px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movieItem:hover {
+  transform: scale(1.05);
+}
+.poster {
+  border-radius: 5px;
+  position: ;
+}
+
+.posterTitle,
+.posterScore {
+  margin-top: 8px;
 }
 
 .movieList {
-  margin: 40px 100px;
+  margin: 40px 50px;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: 550px) {
+  .movieList {
+    margin: 40px 50px;
+  }
 }

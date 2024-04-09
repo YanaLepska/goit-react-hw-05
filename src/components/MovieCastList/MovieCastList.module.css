@@ -1,9 +1,11 @@
 .castList {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  margin: 20px 50px;
-  width: 80%;
+  gap: 20px 30px;
+  margin: 20px 30px;
+  width: 90%;
 }
 
 .castList li {
@@ -12,9 +14,24 @@
   gap: 8px;
   text-align: center;
   width: 200px;
+  height: 370px;
+  border: 1px solid rgb(61, 64, 76);
+  padding: 8px;
 }
 
-img {
+.castImg {
   width: 200px;
   height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .castList {
+    margin: 20px 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .castList {
+    margin: 20px 100px 40px 50px;
+  }
 }

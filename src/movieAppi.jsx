@@ -4,7 +4,6 @@ const API_KEY = "5a79f526ca82e731fc82d492019e4cc5";
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 const options = {
   params: {
-    headers: { accept: "application/json"},
     api_key: API_KEY,
     language: "en-US",
   },
@@ -21,7 +20,13 @@ export const requestMovie = async () => {
 export const requestMovieByQuery = async (query) => {
   const response = await axios.get(
     `/search/movie?query=${query}`,
-    options
+    {
+  params: {
+    api_key: API_KEY,
+        language: "en-US",
+        headers: { key: query },
+  },
+}
   );
   return response;
 };
