@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Loader from "./components/Loader/Loader";
 import Navigations from "./components/Navigations/Navigations";
+import ToUpBtn from "./components/ToUpBtn/ToUpBtn";
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const MovieDetailsPage = lazy(() => import("./pages/MovieDetailsPage/MovieDetailsPage"));
 const MovieCast = lazy(() => import("./components/MovieCast/MovieCast"));
@@ -23,7 +24,7 @@ const App = () => {
         <Route path="*" element={<NotFoundPage/>} />
       </Routes>
       </Suspense>
-      
+      <ToUpBtn/>
     </>
   );
 };
