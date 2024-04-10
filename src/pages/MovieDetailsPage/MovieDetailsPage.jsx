@@ -12,7 +12,8 @@ const MovieDetailsPage = () => {
     const backLink = useRef(location.state?.from ?? "/");
 
 useEffect(() => {
-    async function getMovies() {
+  async function getMovies() {
+      if (!movieId) return;
       try {
           const response = await requestMovieId(movieId);
         setMovieData(response.data);

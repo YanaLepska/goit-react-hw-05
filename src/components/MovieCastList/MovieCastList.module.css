@@ -21,7 +21,8 @@
 
 .castImg {
   width: 200px;
-  height: auto;
+  height: 275px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {

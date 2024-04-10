@@ -17,7 +17,7 @@ export const requestMovie = async () => {
   return response;
 };
 
-export const requestMovieByQuery = async (query) => {
+export const requestMovieByQuery = async (query, page) => {
   const response = await axios.get(
     `/search/movie?query=${query}`,
     {
@@ -25,6 +25,7 @@ export const requestMovieByQuery = async (query) => {
     api_key: API_KEY,
         language: "en-US",
         headers: { key: query },
+        page,
   },
 }
   );

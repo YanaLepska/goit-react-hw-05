@@ -1,0 +1,27 @@
+.LoadMoreBtn {
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.64px;
+  color: rgb(8, 8, 63);
+  background: rgb(184, 164, 238);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 16px 32px;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.LoadMoreBtn:hover {
+  background-color: rgb(221, 120, 182);
+}
+.LoadMoreContainer {
+  display: flex;
+  justify-content: center;
+}
