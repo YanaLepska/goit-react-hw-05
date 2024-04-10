@@ -2,7 +2,7 @@
   margin: 24px 16px 32px 50px;
   width: 300px;
   height: 36px;
-  background-color: rgb(217, 228, 253);
+  background-color: rgb(209, 197, 240);
   padding: 7px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -13,7 +13,7 @@
   line-height: 1.2;
   letter-spacing: 0.64px;
   color: rgb(24, 24, 112);
-  background: rgb(227, 235, 254);
+  background: rgb(209, 197, 240);
   cursor: pointer;
   display: flex;
   flex-direction: column;
