@@ -13,16 +13,22 @@ const MoviesPage = () => {
   const query = searchParams.get("query");
   const [page, setPage] = useState(1);
   const [moviesFetched, setMoviesFetched] = useState(false);
-
+  const [isNewSearch, setIsNewSearch] = useState(true); 
   useEffect(() => {
     async function getMovies() {
       if (!query) return;
       try {
-        const response = await requestMovieByQuery(query,page);
+        const response = await requestMovieByQuery(query, page);
         const newMovies = response.data;
-        setMovies(prevMovies => [...prevMovies, ...newMovies.results]);
+        if (isNewSearch) {
+          
+          setMovies(newMovies.results);
+        } else {
+        
+          setMovies(prevMovies => [...prevMovies, ...newMovies.results]);
+        }
         setMoviesFetched(newMovies.total_pages > page);
-        if (newMovies.length === 0) {
+        if (newMovies.results.length === 0) {
           toast("Movies not found ");
         }
       } catch (error) {
@@ -30,21 +36,23 @@ const MoviesPage = () => {
       }
     }
     getMovies();
-  }, [query, page]);
+  }, [query, page, isNewSearch]);
 
   const onSearchMovie = (keyWord) => {
     if (query === keyWord) {
-      toast("Enter new requarest");
+      toast("Enter new request");
       return;
     }
     setSearchParams({ query: keyWord });
     setPage(1);
     setMoviesFetched(false);
+    setIsNewSearch(true); 
   };
 
   const handleMoreMovie = () => {
     setPage((prev) => prev + 1);
-  }
+    setIsNewSearch(false); 
+  };
 
   return (
     <div>
